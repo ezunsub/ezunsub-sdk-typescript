@@ -1,0 +1,49 @@
+{
+  "name": "@ezunsub/sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for EZUnsub - Contact suppression and unsubscribe management",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "ezunsub",
+    "suppression",
+    "unsubscribe",
+    "email",
+    "marketing",
+    "compliance",
+    "sdk"
+  ],
+  "author": "EZUnsub <dev@ezunsub.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezunsub/ezunsub-sdk-typescript.git"
+  },
+  "homepage": "https://github.com/ezunsub/ezunsub-sdk-typescript#readme",
+  "bugs": {
+    "url": "https://github.com/ezunsub/ezunsub-sdk-typescript/issues"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
